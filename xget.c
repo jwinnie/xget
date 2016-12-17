@@ -1,15 +1,12 @@
-#include <stdio.h>
-#include <string.h>
-#include <stdlib.h>
 
-int main(int argc, char *argv[]) {
-  if (argc!=2) {
-    printf("ERROR: Must be one argument\n");
-    printf("\033[4mman xget\033[0m for more information\n");
-  }
-  else {
-    char command[100] = "wget ";
-    strcat(command, argv[1]);
-    system(command);
-  }
+#include "install.c"
+#include <string.h>
+
+int main ( int argc, char **argv ) {
+	printf( "%s\n", argv[1] );
+	if ( strcmp (argv[1], "install\n") != 0 ) {
+		install ( argv[2] );
+	} else {
+		printf("Sorry, command not available.");
+	}
 }
