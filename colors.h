@@ -1,0 +1,5 @@
+#define ERROR "\x1b[31m"
+#define SUCCESS "\x1b[32m"
+#define WARNING "\x1b[33m"
+#define EMPHASIS "\x1b[35m"
+#define RESET "\x1b[0m"

@@ -1,11 +1,10 @@
 CC=gcc
 OUTPUT=bin
-CURLPATH=-L/usr/lib/x86_64-linux-gnu -lcurl
+CFLAGS=-lcurl
 DEBUGGER=gdb
 
 all:
-	$(CC) xget.c -o $(OUTPUT)/xget $(CURLPATH)
-	
-debug:
-	$(CC) -g xget.c $(CURLPATH) && $(DEBUGGER) a.out
+	$(CC) xget.c -o $(OUTPUT)/xget $(CFLAGS)
 
+debug:
+	$(CC) -g xget.c $(CFLAGS) && $(DEBUGGER) a.out
